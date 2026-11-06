@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+export const siteUrl = "https://kjstudio.dev";
+
 export const languages = ["es", "en"] as const;
 export type Language = (typeof languages)[number];
 
@@ -32,10 +34,10 @@ export const copy = {
       "Te acompañamos desde la primera decisión técnica hasta el software en producción.",
     build: "Desarrollo a medida",
     buildText:
-      "Aplicaciones web, APIs e integraciones para conectar las herramientas que ya usas y simplificar el trabajo diario.",
+      "Creamos aplicaciones web y APIs a medida, y conectamos sistemas mediante integraciones. Podemos ayudarte a trasladar procesos manuales a una aplicación o a comunicar las herramientas que ya utiliza tu negocio.",
     advise: "Consultoría técnica",
     adviseText:
-      "Revisamos tu arquitectura, identificamos cuellos de botella y trazamos contigo un plan de mejoras por prioridad.",
+      "Analizamos la arquitectura y los sistemas existentes para identificar cuellos de botella y oportunidades de mejora. Junto a tu equipo, definimos prioridades y un siguiente paso técnico acorde con las necesidades del proyecto.",
     productHeading: "Productos del estudio",
     founders: "Quiénes somos",
     foundersIntro:
@@ -78,10 +80,10 @@ export const copy = {
       "We work with you from the first technical decision through to running your software in production.",
     build: "Custom development",
     buildText:
-      "Web applications, APIs and integrations that connect the tools you already use and simplify everyday work.",
+      "We build custom web applications and APIs, and connect systems through integrations. We can help move manual processes into an application or make the tools your business already uses work together.",
     advise: "Technical consulting",
     adviseText:
-      "We review your architecture, identify bottlenecks and work with you to prioritize improvements.",
+      "We review existing architecture and systems to identify bottlenecks and opportunities for improvement. Together with your team, we set priorities and define a technical next step for the project.",
     productHeading: "Studio products",
     founders: "Who we are",
     foundersIntro:
@@ -117,9 +119,31 @@ export function pageMetadata(
   const path = (locale: Language) =>
     slug ? productPath(locale, slug) : `/${locale}`;
   return {
-    metadataBase: new URL("https://kjstudio.dev"),
+    metadataBase: new URL(siteUrl),
     title: `${title} | kjstudio.dev`,
     description,
+    openGraph: {
+      type: "website",
+      siteName: "kjstudio.dev",
+      title: `${title} | kjstudio.dev`,
+      description,
+      url: path(lang),
+      locale: lang === "es" ? "es_CR" : "en_US",
+      images: [
+        {
+          url: "/media/architecture.webp",
+          width: 1536,
+          height: 1024,
+          alt: "kjstudio.dev",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | kjstudio.dev`,
+      description,
+      images: ["/media/architecture.webp"],
+    },
     alternates: {
       canonical: path(lang),
       languages: { es: path("es"), en: path("en"), "x-default": path("es") },

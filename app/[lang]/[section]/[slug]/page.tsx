@@ -23,12 +23,7 @@ async function productPage(params: Props["params"]) {
 
 export async function generateMetadata({ params }: Props) {
   const { lang, product, details } = await productPage(params);
-  return pageMetadata(
-    lang,
-    `${product.name} — ${details.title}`,
-    details.summary,
-    product.slug,
-  );
+  return pageMetadata(lang, details.seoTitle, details.summary, product.slug);
 }
 
 export default async function ProductPage({ params }: Props) {

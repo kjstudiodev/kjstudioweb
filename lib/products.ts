@@ -5,6 +5,7 @@ import { LoyaltyPreview } from "@/components/loyalty-preview";
 
 type ProductCopy = {
   title: string;
+  seoTitle: string;
   summary: string;
   action: string;
   inquiry: string;
@@ -27,6 +28,7 @@ export const products: Product[] = [
     text: {
       es: {
         title: "Un programa de puntos con la marca de tu negocio",
+        seoTitle: "App de puntos para restaurantes y comercios | MandoClub",
         summary:
           "Una app de puntos para restaurantes y comercios que quieren dar a sus clientes un motivo para volver.",
         action: "Quiero información para mi negocio",
@@ -34,16 +36,17 @@ export const products: Product[] = [
         features: [
           {
             title: "Puntos para tus clientes",
-            body: "Dale a quien visita tu restaurante o comercio una forma de acumular puntos en tu propio programa.",
+            body: "MandoClub es una aplicación de puntos para restaurantes y otros comercios. Ofrece a tus clientes un programa de fidelización asociado a tu negocio y una forma de acumular puntos.",
           },
           {
             title: "Una app con tu identidad",
-            body: "Adaptamos el logotipo, los colores y el estilo visual de la app para que tus clientes reconozcan tu negocio.",
+            body: "La aplicación se puede personalizar con el logotipo, los colores y el lenguaje visual de cada negocio. Escríbenos para conversar sobre las necesidades de tu programa y las opciones de personalización.",
           },
         ],
       },
       en: {
         title: "A points program with your business’s own brand",
+        seoTitle: "Loyalty points app for restaurants and shops | MandoClub",
         summary:
           "A loyalty points app for restaurants and retailers that want to give customers a reason to come back.",
         action: "Request information for my business",
@@ -51,11 +54,11 @@ export const products: Product[] = [
         features: [
           {
             title: "Points for your customers",
-            body: "Give visitors to your restaurant or store a way to collect points through your own loyalty program.",
+            body: "MandoClub is a points app for restaurants and other businesses. It gives your customers a loyalty program associated with your business and a way to collect points.",
           },
           {
             title: "An app with your identity",
-            body: "We adapt the logo, colors and visual style so your customers recognize your business when they open the app.",
+            body: "The app can be customized with each business’s logo, colors and visual style. Get in touch to discuss your loyalty program and customization needs.",
           },
         ],
       },
@@ -69,6 +72,7 @@ export const products: Product[] = [
     text: {
       es: {
         title: "Una web para que tus pacientes te encuentren",
+        seoTitle: "Páginas web para consultorios médicos | WebParaConsultorios",
         summary:
           "Creamos páginas web para consultorios médicos y profesionales de la salud que quieren mejorar su presencia digital y facilitar el contacto con pacientes.",
         action: "Quiero información para mi consultorio",
@@ -76,16 +80,17 @@ export const products: Product[] = [
         features: [
           {
             title: "Tu consultorio en internet",
-            body: "Presenta tu consultorio, tus servicios y la información que tus pacientes necesitan para conocerte.",
+            body: "WebParaConsultorios crea páginas para consultorios y profesionales de la salud en Costa Rica. Tu sitio puede presentar tus servicios y la información que tus pacientes necesitan para conocerte.",
           },
           {
             title: "Más fácil de encontrar y contactar",
-            body: "Una presencia digital profesional para ayudar a nuevos pacientes a encontrarte y ponerse en contacto contigo.",
+            body: "La propuesta incluye desarrollo profesional, adaptación a móviles y SEO técnico para facilitar que pacientes encuentren tu consultorio y puedan contactarte. Visita WebParaConsultorios para conocer los detalles del servicio.",
           },
         ],
       },
       en: {
         title: "A website that helps patients find you",
+        seoTitle: "Websites for medical practices | WebParaConsultorios",
         summary:
           "We create websites for medical practices and healthcare professionals who want to improve their online presence and make it easier for patients to get in touch.",
         action: "Request information for my practice",
@@ -93,11 +98,11 @@ export const products: Product[] = [
         features: [
           {
             title: "Your practice online",
-            body: "Introduce your practice and services, and share the information patients need to get to know you.",
+            body: "WebParaConsultorios creates websites for medical practices and healthcare professionals in Costa Rica. Your site can introduce your services and share the information patients need to get to know you.",
           },
           {
             title: "Easier to find and contact",
-            body: "A professional online presence that helps new patients find you and get in touch.",
+            body: "The service includes professional development, mobile-friendly design and technical SEO to help patients find and contact your practice. Visit WebParaConsultorios for service details.",
           },
         ],
       },

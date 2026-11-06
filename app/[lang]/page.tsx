@@ -5,7 +5,7 @@ import {
   CodeXml,
   Workflow,
 } from "lucide-react";
-import { copy, language, pageMetadata, productPath } from "@/lib/site";
+import { copy, language, pageMetadata, productPath, siteUrl } from "@/lib/site";
 import { products } from "@/lib/products";
 import { Contact, Header } from "@/components/site-chrome";
 
@@ -20,6 +20,31 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   const first = products[0];
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "kjstudio.dev",
+            url: siteUrl,
+            email: "kjstudiodev@gmail.com",
+            telephone: "+50684590688",
+            founder: [
+              {
+                "@type": "Person",
+                name: "Kenneth Sanabria Vargas",
+                url: "https://dev.kenfoxfire.com/",
+              },
+              {
+                "@type": "Person",
+                name: "Juan Miguel Arias Mejias",
+                url: "https://juanmiguel.dev/",
+              },
+            ],
+          }).replace(/</g, "\u003c"),
+        }}
+      />
       <Header lang={lang} />
       <main id="main">
         <section className="hero">
