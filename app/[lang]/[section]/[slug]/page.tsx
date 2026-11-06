@@ -36,7 +36,14 @@ export default async function ProductPage({ params }: Props) {
   return (
     <>
       <Header lang={lang} product={product} />
-      <main id="main">
+      <main
+        id="main"
+        className={
+          product.slug === "web-para-consultorios"
+            ? "clinic-product"
+            : undefined
+        }
+      >
         <section className="product-hero">
           <div className="wrap product-layout">
             <div>
@@ -57,6 +64,14 @@ export default async function ProductPage({ params }: Props) {
                 {details.action}
                 <ArrowUpRight size={17} />
               </a>
+              {product.website && (
+                <a className="product-website" href={product.website}>
+                  {lang === "es"
+                    ? "Visitar WebParaConsultorios"
+                    : "Visit WebParaConsultorios"}
+                  <ArrowUpRight size={16} />
+                </a>
+              )}
             </div>
             <product.Visual lang={lang} interactive />
           </div>

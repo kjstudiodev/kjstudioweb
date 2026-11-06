@@ -792,3 +792,144 @@ footer h2 + p {
     transition: none !important;
   }
 }
+
+.product-website {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: #e0e8f4;
+  font-size: 0.88rem;
+}
+.product-website:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.clinic-brand-preview {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(290px, 29vw, 430px);
+  background: #fff;
+  color: #082d47;
+  font-family: var(--sans);
+}
+.clinic-brand-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: clamp(20px, 3vw, 34px) clamp(22px, 4vw, 48px);
+  border-bottom: 1px solid #d6e5ef;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.08;
+}
+.clinic-brand-header img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+.clinic-brand-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+  padding: clamp(25px, 3.5vw, 48px) clamp(22px, 4vw, 48px);
+  max-width: 480px;
+}
+.clinic-brand-body p {
+  color: #00659b;
+  font-family: monospace;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.clinic-brand-body strong {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+.clinic-brand-body > span:not(.clinic-brand-cta) {
+  max-width: 300px;
+  color: #526c83;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.clinic-brand-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 9px;
+  padding: 10px 14px;
+  background: #00669e;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.clinic-brand-shape {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 65%;
+  background: #e4f4fc;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+.product-feature:has(.clinic-brand-preview) .product-copy h3 {
+  overflow-wrap: anywhere;
+}
+
+.clinic-product .product-hero {
+  background: #f8fbfd;
+  color: #082d47;
+}
+.clinic-product .back,
+.clinic-product .hero-description {
+  color: #526c83;
+}
+.clinic-product .hero-label {
+  color: #00659b;
+}
+.clinic-product .hero-label .blue-square {
+  background: #00699f;
+}
+.clinic-product .product-layout h1,
+.clinic-product .product-details h2 {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+}
+.clinic-product .product-layout h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1.05;
+}
+.clinic-product .product-layout h1 i {
+  color: #00699f;
+}
+.clinic-product .button {
+  background: #00699f;
+}
+.clinic-product .button:hover {
+  background: #005782;
+}
+.clinic-product .product-website {
+  color: #005782;
+}
+.clinic-product .clinic-brand-preview {
+  border: 1px solid #d6e5ef;
+  border-radius: 16px;
+  box-shadow: 0 16px 38px #082d4712;
+}
+.clinic-product .product-details h2 {
+  font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+  line-height: 1.15;
+}
+.clinic-product .product-website {
+  display: flex;
+  width: fit-content;
+}
