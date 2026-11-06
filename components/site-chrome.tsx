@@ -19,15 +19,18 @@ export function Brand({ lang }: { lang: Language }) {
 export function Header({
   lang,
   product,
+  languagePaths,
 }: {
   lang: Language;
   product?: Product;
+  languagePaths?: Record<Language, string>;
 }) {
   const t = copy[lang];
   const links = [
     { label: t.services, href: `/${lang}#services` },
     { label: t.products, href: `/${lang}#products` },
     { label: t.studio, href: `/${lang}#studio` },
+    { label: "Blog", href: `/${lang}/blog` },
   ];
   return (
     <header className="header" id="top">
@@ -53,7 +56,8 @@ export function Header({
                 aria-label={locale === "es" ? "Español" : "English"}
                 aria-current={lang === locale ? "page" : undefined}
                 href={
-                  product ? productPath(locale, product.slug) : `/${locale}`
+                  languagePaths?.[locale] ??
+                  (product ? productPath(locale, product.slug) : `/${locale}`)
                 }
               >
                 {locale.toUpperCase()}

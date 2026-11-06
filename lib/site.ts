@@ -26,18 +26,21 @@ export const copy = {
     emphasis: "consultoría técnica.",
     conjunction: "y",
     description:
-      "Creamos aplicaciones, conectamos sistemas y te ayudamos a decidir el siguiente paso técnico de tu negocio.",
+      "Desarrollamos software a medida, ofrecemos consultoría técnica y capacitamos a equipos empresariales en inteligencia artificial.",
     talk: "Hablemos de tu proyecto",
     secondary: "Conoce",
     serviceHeading: "Qué hacemos",
     serviceIntro:
-      "Te acompañamos desde la primera decisión técnica hasta el software en producción.",
+      "Desarrollamos soluciones y compartimos conocimiento para ayudar a tu equipo a avanzar con tecnología.",
     build: "Desarrollo a medida",
     buildText:
       "Creamos aplicaciones web y APIs a medida, y conectamos sistemas mediante integraciones. Podemos ayudarte a trasladar procesos manuales a una aplicación o a comunicar las herramientas que ya utiliza tu negocio.",
     advise: "Consultoría técnica",
     adviseText:
       "Analizamos la arquitectura y los sistemas existentes para identificar cuellos de botella y oportunidades de mejora. Junto a tu equipo, definimos prioridades y un siguiente paso técnico acorde con las necesidades del proyecto.",
+    training: "Capacitación profesional en IA",
+    trainingText:
+      "Ofrecemos capacitaciones profesionales en inteligencia artificial para empresas y sus equipos, orientadas a comprender la tecnología y explorar su aplicación en el trabajo.",
     productHeading: "Productos del estudio",
     founders: "Quiénes somos",
     foundersIntro:
@@ -72,18 +75,21 @@ export const copy = {
     emphasis: "technical consulting.",
     conjunction: "and",
     description:
-      "We build applications, connect systems and help you choose the next technical step for your business.",
+      "We develop custom software, provide technical consulting and train business teams in artificial intelligence.",
     talk: "Tell us about your project",
     secondary: "Explore",
     serviceHeading: "What we do",
     serviceIntro:
-      "We work with you from the first technical decision through to running your software in production.",
+      "We build solutions and share knowledge to help your team move forward with technology.",
     build: "Custom development",
     buildText:
       "We build custom web applications and APIs, and connect systems through integrations. We can help move manual processes into an application or make the tools your business already uses work together.",
     advise: "Technical consulting",
     adviseText:
       "We review existing architecture and systems to identify bottlenecks and opportunities for improvement. Together with your team, we set priorities and define a technical next step for the project.",
+    training: "Professional AI training",
+    trainingText:
+      "We provide professional artificial intelligence training for businesses and their teams, focused on understanding the technology and exploring its applications at work.",
     productHeading: "Studio products",
     founders: "Who we are",
     foundersIntro:
@@ -115,9 +121,14 @@ export function pageMetadata(
   title: string,
   description: string,
   slug?: string,
+  localizedPath?: (locale: Language) => string,
 ): Metadata {
   const path = (locale: Language) =>
-    slug ? productPath(locale, slug) : `/${locale}`;
+    localizedPath
+      ? localizedPath(locale)
+      : slug
+        ? productPath(locale, slug)
+        : `/${locale}`;
   return {
     metadataBase: new URL(siteUrl),
     title: `${title} | kjstudio.dev`,

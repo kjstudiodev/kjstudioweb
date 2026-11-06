@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   CodeXml,
   Workflow,
+  GraduationCap,
 } from "lucide-react";
 import { copy, language, pageMetadata, productPath, siteUrl } from "@/lib/site";
 import { products } from "@/lib/products";
@@ -99,6 +100,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             {[
               { Icon: CodeXml, title: t.build, body: t.buildText },
               { Icon: Workflow, title: t.advise, body: t.adviseText },
+              { Icon: GraduationCap, title: t.training, body: t.trainingText },
             ].map(({ Icon, title, body }) => (
               <article className="service" key={title}>
                 <Icon className="service-icon" size={24} strokeWidth={1.55} />
