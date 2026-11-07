@@ -35,7 +35,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Cloudflare Workers
-/.open-next/
-/.wrangler/
 .dev.vars*

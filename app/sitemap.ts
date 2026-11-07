@@ -3,6 +3,8 @@ import { articles, articlePath } from "@/lib/articles";
 import { products } from "@/lib/products";
 import { languages, productPath, siteUrl } from "@/lib/site";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return languages.flatMap((lang) => [
     { url: `${siteUrl}/${lang}` },
