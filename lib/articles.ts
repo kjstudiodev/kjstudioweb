@@ -104,7 +104,7 @@ export const articles: Article[] = [
   },
   {
     id: "loyalty-points",
-    relatedProduct: "mandoclub",
+    relatedProduct: "LoyaltyClub",
     text: {
       es: {
         slug: "como-crear-programa-puntos-restaurante",
@@ -133,7 +133,7 @@ export const articles: Article[] = [
             heading: "Haz que la experiencia refleje tu marca",
             paragraphs: [
               "El programa debe ser reconocible para tus clientes y fácil de utilizar desde un teléfono. Usa el nombre, logotipo y colores del negocio de forma coherente con tus otros canales.",
-              "MandoClub es una app de puntos que puede personalizarse con la identidad visual de cada negocio. Una conversación con el equipo permite revisar las necesidades de tu programa y las opciones disponibles.",
+              "LoyaltyClub es una app de puntos que puede personalizarse con la identidad visual de cada negocio. Una conversación con el equipo permite revisar las necesidades de tu programa y las opciones disponibles.",
             ],
           },
           {
@@ -144,7 +144,7 @@ export const articles: Article[] = [
             ],
           },
         ],
-        relatedLabel: "Conoce MandoClub",
+        relatedLabel: "Conoce LoyaltyClub",
       },
       en: {
         slug: "how-to-design-restaurant-loyalty-points-program",
@@ -173,7 +173,7 @@ export const articles: Article[] = [
             heading: "Make the experience reflect your brand",
             paragraphs: [
               "The program should be recognizable to customers and easy to use on a phone. Use your business name, logo and colors consistently with your other channels.",
-              "MandoClub is a points app that can be customized with each business’s visual identity. A conversation with the team can help clarify your program needs and available options.",
+              "LoyaltyClub is a points app that can be customized with each business’s visual identity. A conversation with the team can help clarify your program needs and available options.",
             ],
           },
           {
@@ -184,7 +184,7 @@ export const articles: Article[] = [
             ],
           },
         ],
-        relatedLabel: "Explore MandoClub",
+        relatedLabel: "Explore LoyaltyClub",
       },
     },
   },

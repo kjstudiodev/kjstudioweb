@@ -22,21 +22,21 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    slug: "mandoclub",
-    name: "MandoClub",
+    slug: "LoyaltyClub",
+    name: "LoyaltyClub",
     Visual: LoyaltyPreview,
     text: {
       es: {
         title: "Un programa de puntos con la marca de tu negocio",
-        seoTitle: "App de puntos para restaurantes y comercios | MandoClub",
+        seoTitle: "App de puntos para restaurantes y comercios | LoyaltyClub",
         summary:
           "Una app de puntos para restaurantes y comercios que quieren dar a sus clientes un motivo para volver.",
         action: "Quiero información para mi negocio",
-        inquiry: "Me interesa MandoClub para mi negocio",
+        inquiry: "Me interesa LoyaltyClub para mi negocio",
         features: [
           {
             title: "Puntos para tus clientes",
-            body: "MandoClub es una aplicación de puntos para restaurantes y otros comercios. Ofrece a tus clientes un programa de fidelización asociado a tu negocio y una forma de acumular puntos.",
+            body: "LoyaltyClub es una aplicación de puntos para restaurantes y otros comercios. Ofrece a tus clientes un programa de fidelización asociado a tu negocio y una forma de acumular puntos.",
           },
           {
             title: "Una app con tu identidad",
@@ -46,15 +46,15 @@ export const products: Product[] = [
       },
       en: {
         title: "A points program with your business’s own brand",
-        seoTitle: "Loyalty points app for restaurants and shops | MandoClub",
+        seoTitle: "Loyalty points app for restaurants and shops | LoyaltyClub",
         summary:
           "A loyalty points app for restaurants and retailers that want to give customers a reason to come back.",
         action: "Request information for my business",
-        inquiry: "I’m interested in MandoClub for my business",
+        inquiry: "I’m interested in LoyaltyClub for my business",
         features: [
           {
             title: "Points for your customers",
-            body: "MandoClub is a points app for restaurants and other businesses. It gives your customers a loyalty program associated with your business and a way to collect points.",
+            body: "LoyaltyClub is a points app for restaurants and other businesses. It gives your customers a loyalty program associated with your business and a way to collect points.",
           },
           {
             title: "An app with your identity",

@@ -38,7 +38,7 @@ Los enlaces deben tener un destino inequívoco, foco visible y texto legible al 
 
 Cada ficha del catálogo incluye un identificador estable, el nombre, una muestra visual y contenido en español e inglés. Mantener las dos traducciones juntas. El catálogo alimenta tanto la lista de portada como las rutas individuales. El primer producto de la lista ocupa la acción secundaria de la portada.
 
-Cada landing explica el problema, el público, la propuesta y el siguiente paso disponible. MandoClub usa dos tarjetas de puntos de marcas ilustrativas, Oliva y Mesa, con logotipos, colores y tratamientos propios. Los datos de puntos son ejemplos. El selector permite comparar la personalización y el contacto sirve para solicitar información.
+Cada landing explica el problema, el público, la propuesta y el siguiente paso disponible. LoyaltyClub usa dos tarjetas de puntos de marcas ilustrativas, Oliva y Mesa, con logotipos, colores y tratamientos propios. Los datos de puntos son ejemplos. El selector permite comparar la personalización y el contacto sirve para solicitar información.
 
 Distinguir las consultas mediante el nombre del producto en el asunto del correo y en el texto sugerido de WhatsApp. Para comparar demanda, contar las conversaciones recibidas por producto en ambos canales y agrupar las dos traducciones. Un clic solo abre el canal elegido.
 
