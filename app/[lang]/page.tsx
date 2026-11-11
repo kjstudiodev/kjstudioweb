@@ -9,6 +9,7 @@ import {
 import { copy, language, pageMetadata, productPath, siteUrl } from "@/lib/site";
 import { products } from "@/lib/products";
 import { Contact, Header } from "@/components/site-chrome";
+import { SoftwareDiagram } from "@/components/software-diagram";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]">) {
   const lang = language((await params).lang);
@@ -49,39 +50,34 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <Header lang={lang} />
       <main id="main">
         <section className="hero">
-          <img
-            className="hero-image"
-            src="/media/architecture.webp"
-            alt=""
-            width="1536"
-            height="1024"
-            fetchPriority="high"
-          />
           <div className="wrap hero-inner">
-            <p className="hero-label">
-              <span className="blue-square" />
-              {t.intro}
-              <span className="label-slash">/</span>
-              {t.location}
-            </p>
-            <h1>
-              {t.headline}
-              <br />
-              {t.conjunction} <em>{t.emphasis}</em>
-            </h1>
-            <p className="hero-description">{t.description}</p>
-            <div className="hero-actions">
-              <a className="button" href="#contact">
-                {t.talk}
-                <ArrowUpRight size={18} />
-              </a>
-              {first && (
-                <a className="text-action" href={productPath(lang, first.slug)}>
-                  {t.secondary} {first.name}
-                  <ArrowRight size={16} />
+            <div className="hero-copy">
+              <p className="hero-label">
+                <span className="blue-square" />
+                {t.intro}
+                <span className="label-slash">/</span>
+                {t.location}
+              </p>
+              <h1>
+                {t.headline}
+                <br />
+                {t.conjunction} <em>{t.emphasis}</em>
+              </h1>
+              <p className="hero-description">{t.description}</p>
+              <div className="hero-actions">
+                <a className="button" href="#contact">
+                  {t.talk}
+                  <ArrowUpRight size={18} />
                 </a>
-              )}
+                {first && (
+                  <a className="text-action" href={productPath(lang, first.slug)}>
+                    {t.secondary} {first.name}
+                    <ArrowRight size={16} />
+                  </a>
+                )}
+              </div>
             </div>
+            <SoftwareDiagram lang={lang} />
           </div>
           <a className="scroll-cue" href="#services" aria-label={t.services}>
             <ArrowDown size={17} />

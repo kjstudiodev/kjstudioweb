@@ -2,7 +2,11 @@
 
 ## La portada
 
-El primer vistazo debe responder quién desarrolla el software, en qué puede ayudar y cómo iniciar una conversación. La composición toma como referencia el portátil de la lámina de marca: texto claro a la izquierda y un volumen arquitectónico a la derecha. La cara azul del edificio repite el acento del monograma. En móvil se lee primero la propuesta, después las acciones y por último la imagen.
+El primer vistazo debe responder quién desarrolla el software, en qué puede ayudar y cómo iniciar una conversación. La portada combina texto claro a la izquierda con una arquitectura isométrica en Three.js a la derecha: una interfaz en capas, un núcleo de servicios y un bloque de datos unidos sobre una base con conexiones ortogonales. El núcleo azul acompaña al monograma. Hasta 1000 px, la escena se coloca debajo de las acciones para conservar la legibilidad.
+
+La escena se carga mediante importación diferida después de la carga de la página y cuando está visible. Los módulos se ensamblan al entrar, las capas del núcleo flotan suavemente y pequeños paquetes recorren las conexiones. El cursor inclina ligeramente el conjunto. Limitar el renderizado a 30 FPS y el lienzo a 600 000 píxeles, sin sombras dinámicas, efectos de posprocesado ni modelos externos. Pausar fuera de pantalla y cuando la pestaña está oculta; liberar los recursos al desmontar. En pantallas de hasta 680 px, con movimiento reducido o ahorro de datos, no cargar Three.js: mostrar la captura estática de la misma escena. Esa imagen también funciona sin JavaScript o si WebGL falla. Reservar la relación 10:7 y mantener visibles el titular y las acciones desde el primer render.
+
+Precargar la vista previa según el ancho de pantalla: 500 × 350 px en móvil y 1000 × 700 px en escritorio. Mantener los archivos separados del HTML para que puedan almacenarse en caché.
 
 La portada presenta dos servicios, los productos disponibles, los dos fundadores y el contacto. Dedicar una fila a cada servicio, con un ejemplo concreto del trabajo. Mantener el vínculo al portafolio junto a la biografía a la que corresponde. Atribuir la experiencia previa a cada fundador.
 
@@ -10,7 +14,7 @@ La portada presenta dos servicios, los productos disponibles, los dos fundadores
 
 | Token | Valor | Aplicación |
 | --- | --- | --- |
-| Tinta | `#0B1220` | Texto principal, pie de página y variante oscura del favicon. El hero usa una derivación más oscura, `#050A14`, para integrarse con la fotografía. |
+| Tinta | `#0B1220` | Texto principal, pie de página y variante oscura del favicon. El hero usa una derivación más oscura, `#050A14`, como fondo del diagrama. |
 | Azul | `#2563EB` | Botón principal con texto blanco, punto del monograma y pequeños acentos. Para enlaces de texto sobre fondos claros usar `#184EBC`. |
 | Divisor | `#E5E7EB` | Separaciones de contenido sobre fondos claros. Sobre tinta, usar blanco con un 20 % de opacidad. |
 | Papel | `#FAFAFC` | Superficie de lectura y texto de alto contraste sobre tinta. |
